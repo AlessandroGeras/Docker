@@ -14,6 +14,9 @@
 ## Listar imagens disponíveis
 <pre id="tmp" style="display: none">docker images</pre>
 
+## Listar containers em execução
+<pre id="tmp" style="display: none">docker ps<br><br>docker ps -a (containers que não estão em execução)</pre>
+
 ## Executar imagem
 <pre id="tmp" style="display: none">docker run nomedaimagem</pre>
 
