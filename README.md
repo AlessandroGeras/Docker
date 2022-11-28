@@ -2,12 +2,24 @@
 ### Repositório para estudos sobre Docker
   <br />
   
-# Instalar Docker
-## Instalação por script
+# 1. Instalação
+## Instalação do Docker por script
 
 <pre id="tmp" style="display: none">Download script https://docs.docker.com/engine/install/ubuntu/ <br>curl -fsSL https://get.docker.com -o get-docker.sh<br><br>Executar script<br>sh ./get-docker.sh <br><br>Verificar versão<br>docker version <br><br>Verificar se o serviço está rodando<br>systemctl status docker</pre><br>
 
-# Acesso remoto
+# 2. Imagens
+## Download imagens do Docker
+<pre id="tmp" style="display: none">docker pull nomedaimagem<br>Ex:docker pull hello-world<br><br>Download imagem com versão específica<br>Ex:docker pull postgres:9.6 </pre>
+
+## Listar imagens disponíveis
+<pre id="tmp" style="display: none">docker images</pre>
+
+## Executar imagem
+<pre id="tmp" style="display: none">docker run nomedaimagem</pre>
+
+<br>
+
+# 3. Acesso remoto as VM´s com Docker
 ## Fazer acesso Linux -> Linux usando SSH
 
 <pre id="tmp" style="display: none">Usar SSH com usuário e IP<br><br>Ex: ssh alessandro@10.0.0.10</pre>
