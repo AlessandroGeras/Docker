@@ -2,12 +2,18 @@
 ### Repositório para estudos sobre Docker
   <br />
   
-  ## Configurando uma VM na AWS (EC2)
+  ## Configurar VM na AWS (EC2)
   
 1. Criar instância (Nome da VM e distribuição).
 2. Criar par de chaves para conexão remota (Nome da chave, criptografia RSA e formato PEM para conexão OPENSSH).
 3. Permitir tráfego SSH para a conexão remota.
 4. Executar a instância para concluir.<br><br>
+
+## Fazer acesso remoto a uma máquina Linux -> Linux
+
+<pre id="tmp" style="display: none">Usar SSH com usuário e IP<br><br>Ex: ssh alessandro@10.0.0.10</pre>
+A senha será pedida depois. <br><br>
+
   
   ## Fazer acesso remoto a uma máquina Windows -> Linux usando Putty
 **Observações:** <br>
