@@ -1,13 +1,18 @@
 # Docker
 ### Repositório para estudos sobre Docker
   <br />
+  
+# Instalar Docker
+## Instalação por script
 
+<pre id="tmp" style="display: none">Download script https://docs.docker.com/engine/install/ubuntu/ <br>curl -fsSL https://get.docker.com -o get-docker.sh<br><br>Executar script<br>sh ./get-docker.sh <br><br>Verificar versão<br>docker version <br><br>Verificar se o serviço está rodando<br>systemctl status docker</pre><br>
+
+# Acesso remoto
 ## Fazer acesso Linux -> Linux usando SSH
 
 <pre id="tmp" style="display: none">Usar SSH com usuário e IP<br><br>Ex: ssh alessandro@10.0.0.10</pre>
 A senha será pedida depois. <br><br>
 
-  
   ## Fazer acesso remoto Windows -> Linux usando Putty
 **Observações:** <br>
 
