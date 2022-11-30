@@ -18,7 +18,7 @@
 <pre id="tmp" style="display: none">docker ps<br><br>docker ps -a (containers que não estão em execução)</pre>
 
 ## Executar container a partir de uma imagem
-<pre id="tmp" style="display: none">docker run nomedaimagem</pre>
+<pre id="tmp" style="display: none">docker run nomedaimagem<br><br>docker run -d nomedaimagem (detached mode - rodar o container em background, podendo fechar o terminal sem terminar o serviço)</pre>
 
 <br>
 
