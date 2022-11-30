@@ -20,6 +20,9 @@
 ## Executar container a partir de uma imagem
 <pre id="tmp" style="display: none">docker run nomedaimagem<br><br>docker run -d nomedaimagem (detached mode - rodar o container em background, podendo fechar o terminal sem terminar o serviço)</pre>
 
+## Entrar em um container para interagir nele
+<pre id="tmp" style="display: none">docker run -it nomedaimagem (obs:entra no container e ao sair dele seu serviço terminará<br><br>docker run -idt nomedaimagem (obs: detached mode - não entrará no container mas deixará que ele receba comandos de execução)</pre>
+
 <br>
 
 # 3. Acesso remoto as VM´s com Docker
