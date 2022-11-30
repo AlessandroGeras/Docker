@@ -29,6 +29,9 @@
 ## Comandos gerais
 <pre id="tmp" style="display: none">docker start IDcontainer<br><br>docker stop IDcontainer<br><br>docker restart IDcontainer<br><br>docker rm IDcontainer (remove container)<br><br>docker rmi nomedaimagem (remove imagem)</pre>
 
+## Copiar arquivos
+<pre id="tmp" style="display: none">docker cp nomedoarquivoorigem.ext IDcontainer:/nomediretório (VM->container)<br><br>docker cp IDcontainer:/nomediretório/nomedoarquivoorigem.ext nomedoarquivodestino.ext (container->VM)</pre>
+
 <br>
 
 # 3. Acesso remoto as VM´s com Docker
