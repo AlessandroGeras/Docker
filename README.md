@@ -32,6 +32,9 @@
 ## Copiar arquivos
 <pre id="tmp" style="display: none">docker cp nomedoarquivoorigem.ext IDcontainer:/nomediretório (VM->container)<br><br>docker cp IDcontainer:/nomediretório/nomedoarquivoorigem.ext nomedoarquivodestino.ext (container->VM)</pre>
 
+## Configurar variáveis de ambiente e porta
+<pre id="tmp" style="display: none">Exemplo de configuração do PostgreSQL<br>docker run --name postgreServer -e POSTGRES_PASSWORD=senha -d -p 5432:5432 postgres (detached mode)</pre>
+
 <br>
 
 # 3. Acesso remoto as VM´s com Docker
