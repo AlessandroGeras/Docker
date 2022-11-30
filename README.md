@@ -20,10 +20,13 @@
 ## Executar container a partir de uma imagem
 <pre id="tmp" style="display: none">docker run nomedaimagem<br><br>docker run -d nomedaimagem (detached mode - rodar o container em background, podendo fechar o terminal sem terminar o serviço)</pre>
 
-## Entrar em um container para interagir nele
-<pre id="tmp" style="display: none">docker run -it nomedaimagem (obs:entra no container e ao sair dele seu serviço terminará<br><br>docker run -idt nomedaimagem (obs: detached mode - não entrará no container mas deixará que ele receba comandos de execução)</pre>
+## Entrar em um container diretamente para executar comandos
+<pre id="tmp" style="display: none">docker run -it nomedaimagem (obs:entra no container e ao sair dele seu serviço terminará)</pre>
 
-## Comandos para containers
+## Não entrar em um container diretamente mas permitir comandos para interagir nele
+<pre id="tmp" style="display: none">docker run -dit nomedaimagem (obs: detached mode - não entrará no container mas deixará que ele receba comandos de execução)<br><br>docker exec -it IDcontainer comandoaserexecutado<br>Ex:docker exec -it 12345 /bin/bash (exemplo para entrar no container)</pre>
+
+## Comandos gerais para containers
 <pre id="tmp" style="display: none">docker start IDcontainer<br><br>docker stop IDcontainer<br><br>docker restart IDcontainer</pre>
 
 <br>
