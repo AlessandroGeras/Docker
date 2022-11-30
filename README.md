@@ -24,7 +24,7 @@
 <pre id="tmp" style="display: none">docker run -it nomedaimagem (obs:entra no container e ao sair dele seu serviço terminará)</pre>
 
 ## Não entrar em um container diretamente mas permitir comandos para interagir nele
-<pre id="tmp" style="display: none">docker run -dit nomedaimagem (obs: detached mode - não entrará no container mas deixará que ele receba comandos de execução)<br><br>Criar container com nome específico<br>docker run -dit -name NomeContainerEspecífico nomedaimagem<br><br>docker exec -it IDcontainer comandoaserexecutado<br>Ex:docker exec -it 12345 /bin/bash (exemplo para entrar no container)</pre>
+<pre id="tmp" style="display: none">docker run -dit nomedaimagem (obs: detached mode - não entrará no container mas deixará que ele receba comandos de execução)<br><br>Criar container com nome específico<br>Ex:docker run -dit -name nomecontainerespecífico nomedaimagem (podemos criar várias instâncias do mesmo container)<br><br>docker exec -it IDcontainer comandoaserexecutado<br>Ex:docker exec -it 12345 /bin/bash (exemplo para entrar no container)</pre>
 
 ## Comandos gerais
 <pre id="tmp" style="display: none">docker start IDcontainer<br><br>docker stop IDcontainer<br><br>docker restart IDcontainer<br><br>docker rm IDcontainer (remove container)<br><br>docker rmi nomedaimagem (remove imagem)</pre>
