@@ -37,7 +37,10 @@
 
 ## Salvar dados de um conteiner
 Os conteiners salvam dados dentro deles mesmos e caso sejam excluídos, será apagado junto a sua database. Por isso é importante apontar um caminho para que a database seja salva fora do container.
-<pre id="tmp" style="display: none">docker inspect nomedaimagem (procurar em Mounts, o tipo volume e seu destino)<br><br>docker run --name postgreServer -e POSTGRES_PASSWORD=senha -d -p 5432:5432 --volume=/pastaasersalvalocalmente:/pastaoriginalsalvadocontainer postgres<br>Ex:docker run --name postgreServer -e POSTGRES_PASSWORD=senha -d -p 5432:5432 --volume=/data/postgreserver:/var/lib/postgres postgres</pre>
+<pre id="tmp" style="display: none">docker inspect nomedaimagem (procurar em Mounts, o tipo volume e seu destino)<br><br>docker run --name postgreServer -e POSTGRES_PASSWORD=senha -d -p 5432:5432 --volume=/pastalocalforacontainer:/pastacontainer postgres<br>Ex:docker run --name postgreServer -e POSTGRES_PASSWORD=senha -d -p 5432:5432 --volume=/data/postgreserver:/var/lib/postgres postgres</pre>
+
+## Montar uma pasta em um container
+<pre id="tmp" style="display: none">docker run -dti --mount type=bind,src=pastalocalforacontainer,dst=/pastadestinocontainer postgres<br>Ex:docker run -dti --mount type=bind,src=/data/postgreserver,dst=/data postgres</pre>
 
 <br>
 
