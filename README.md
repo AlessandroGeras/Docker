@@ -27,7 +27,7 @@
 <pre id="tmp" style="display: none">docker run -dit nomedaimagem (obs: detached mode - não entrará no container mas deixará que ele receba comandos de execução)<br><br>Criar container com nome específico<br>Ex:docker run -dit -name nomecontainerespecífico nomedaimagem (podemos criar várias instâncias do mesmo container)<br><br>docker exec -it IDcontainer comandoaserexecutado<br>Ex:docker exec -it 12345 /bin/bash (exemplo para entrar no container)</pre>
 
 ## Comandos gerais
-<pre id="tmp" style="display: none">docker start IDcontainer<br><br>docker stop IDcontainer<br><br>docker restart IDcontainer<br><br>docker rm IDcontainer (remove container)<br><br>docker rmi nomedaimagem (remove imagem)<br><br>docker inspect nomedaimagem (obter informações gerais sobre uma imagem como sistema operacional, arquitetura e tamanho)</pre>
+<pre id="tmp" style="display: none">docker start IDcontainer<br><br>docker stop IDcontainer<br><br>docker restart IDcontainer<br><br>docker rm IDcontainer (remove container)<br><br>docker rmi nomedaimagem (remove imagem)<br><br>docker inspect nomedaimagem (obter informações gerais sobre uma imagem como sistema operacional, arquitetura e tamanho)<br><br>docker stats IDcontainer (obter informações gerais sobre um conteiner como memória usada e processador)</pre>
 
 ## Copiar arquivos
 <pre id="tmp" style="display: none">docker cp nomedoarquivoorigem.ext IDcontainer:/nomediretório (VM->container)<br><br>docker cp IDcontainer:/nomediretório/nomedoarquivoorigem.ext nomedoarquivodestino.ext (container->VM)</pre>
@@ -41,6 +41,9 @@ Os conteiners salvam dados dentro deles mesmos e caso sejam excluídos, será ap
 
 ## Montar uma pasta em um container
 <pre id="tmp" style="display: none">docker run -dti --mount type=bind,src=pastalocalforacontainer,dst=/pastadestinocontainer postgres<br>Ex:docker run -dti --mount type=bind,src=/data/postgreserver,dst=/data postgres<br><br>Montar pasta com permissão de apenas leitura<br>docker run -dti --mount type=bind,src=/data/postgreserver,dst=/data,ro postgres (ro=>read only)</pre>
+
+## Limitar memória e cpu sobre um conteiner
+<pre id="tmp" style="display: none">docker update IDconteiner -m memórialimite --cpus cpulimiteem%<br>Ex:docker update --name postgreServer -m 128M --cpus 0.2</pre>
 
 <br>
 
