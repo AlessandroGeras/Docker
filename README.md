@@ -79,4 +79,14 @@ Ao botar o IP e a porta padrão, a máquina que receber o acesso remoto pedirá 
 
 ## Fazer acesso Linux -> AWS usando SSH
 
-<pre id="tmp" style="display: none">Usar SSH com chave de acesso, usuário e IP<br><br>Ex: ssh -t nomedachave.pem ubuntu@10.0.0.10</pre><br><br>
+<pre id="tmp" style="display: none">Usar SSH com chave de acesso, usuário e IP<br><br>Ex: ssh -t nomedachave.pem ubuntu@10.0.0.10</pre><br>
+
+# 4. Criando imagens (Dockerfile)
+## Exemplo de como criar uma imagem personalizada com Phyton
+<pre id="tmp" style="display: none">Criar o arquivo python<br>nano app.py<br><br>name=input("Digite seu nome")<br>print (name)</pre>
+
+Criar o dockerfile
+<pre id="tmp" style="display: none">nano dockerfile<br><br>FROM ubuntu (criar a imagem a partir de uma imagem base)<br><br>RUN apt update & apt install -y python3 && apt clean (instalar o python e limpar arquivos temporários)<br><br>COPY app.py /opt/app.py (copiar arquivos para a imagem)<br><br>CMD python3  /opt/app.py (executar o python)</pre>
+
+Fazer a build
+<pre id="tmp" style="display: none">docker build . -t pythonpersonalizado</pre>
